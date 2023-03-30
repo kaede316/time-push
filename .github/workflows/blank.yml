@@ -16,6 +16,9 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.9.1
+          cache: "pip"
+        env:
+          AGENT_TOOLSDIRECTORY: /opt/hostedtoolcache
       - name: Set timezone
         run: |
           cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
